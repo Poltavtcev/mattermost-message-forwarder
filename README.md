@@ -11,7 +11,10 @@ Mattermost plugin **Forward Anywhere**: forward any message to another channel o
 
 ## Build
 
+`plugin.json` is the source of truth. Run **`make apply`** once to generate `webapp/src/manifest.ts` (and `server/manifest.go`); those files are gitignored but required for TypeScript and builds. CI runs `make apply` before `tsc`.
+
 ```bash
+make apply   # if manifest files are missing locally
 make dist
 ```
 
