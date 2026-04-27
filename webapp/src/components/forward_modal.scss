@@ -1,0 +1,174 @@
+// Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
+// See LICENSE.txt for license information.
+
+.forward-anywhere-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.forward-anywhere-overlay .modal-dialog {
+    margin: 0;
+    max-width: min(560px, 100%);
+    width: 100%;
+}
+
+.forward-anywhere-overlay .modal-content {
+    border: 1px solid rgba(var(--center-channel-color-rgb), 0.16);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    background: var(--center-channel-bg);
+    color: var(--center-channel-color);
+}
+
+.forward-anywhere-overlay .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(var(--center-channel-color-rgb), 0.12);
+}
+
+.forward-anywhere-overlay .modal-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.forward-anywhere-overlay .modal-body {
+    padding: 0;
+}
+
+.forward-anywhere-overlay .forward-anywhere-body-padding {
+    padding: 16px 20px 8px;
+}
+
+.forward-anywhere-overlay .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 12px 20px 16px;
+    border-top: 1px solid rgba(var(--center-channel-color-rgb), 0.12);
+}
+
+.forward-anywhere-info {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border-left: 4px solid var(--link-color, #3d8fe8);
+    background: rgba(61, 143, 232, 0.08);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.forward-anywhere-info svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.forward-anywhere-field-label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.forward-anywhere-select,
+.forward-anywhere-input,
+.forward-anywhere-textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: var(--center-channel-bg);
+    color: var(--center-channel-color);
+    border: 1px solid rgba(var(--center-channel-color-rgb), 0.24);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.forward-anywhere-user-field {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.forward-anywhere-user-field .forward-anywhere-input {
+    margin-bottom: 0;
+}
+
+.forward-anywhere-suggest {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    top: calc(100% + 4px);
+    max-height: 220px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 4px 0;
+    list-style: none;
+    background: var(--center-channel-bg);
+    color: var(--center-channel-color);
+    border: 1px solid rgba(var(--center-channel-color-rgb), 0.24);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.forward-anywhere-suggest__btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 6px 12px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.forward-anywhere-suggest__btn:hover,
+.forward-anywhere-suggest__btn:focus {
+    background: rgba(var(--center-channel-color-rgb), 0.08);
+    outline: none;
+}
+
+.forward-anywhere-suggest__hint {
+    padding: 8px 12px;
+    margin: 0;
+    font-size: 13px;
+    color: rgba(var(--center-channel-color-rgb), 0.72);
+}
+
+.forward-anywhere-textarea {
+    min-height: 72px;
+    resize: vertical;
+}
+
+.forward-anywhere-error {
+    color: var(--error-text);
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.forward-anywhere-close {
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    padding: 0 4px;
+    opacity: 0.65;
+    color: inherit;
+    cursor: pointer;
+}
+
+.forward-anywhere-close:hover {
+    opacity: 1;
+}
